@@ -1,18 +1,18 @@
 class script(object):
 
 
-    START_MSG = """ <b>Hi {}
+    START_MSG = """<b>Hey {}!!</b>
+    
+<i>I'm 👩‍🔬 All Movie Rockers!
 
-You can call this as an Auto Filter Bot if you like :D
+💡 I Am Just A Bot To upload the Links given in main Channel!...😉
 
-This is Version 2 of Auto Filter Bot
+Just Add Me To Your Group And Channel And Connect Them And See My Powers!! 🔥🔥⚡️
 
-Bot gives button link to files in connected channels on query !
+For More Details Click Help and Know More Button Below..
 
-No need to add filters for your files or movies from now on!
-
-For more click <i>help</i></b>"""
-
+--> @shreevish 🧑‍
+</i>"""    
 
     HELP_MSG = """<b>How to use the bot??</b>
 
@@ -53,17 +53,17 @@ No need add each filter again!
 Bot will automatically search for your files and give links to that!
 
 
-<b>© @TroJanzHEX</b>"""
+<b>© @shreevish</b>"""
 
 
-    ABOUT_MSG = """⭕️<b>My Name : Auto Filter Bot V2</b>
+    ABOUT_MSG = """⭕️<b>My Name : Main-Auto-Post-From-group-v2</b>
     
-⭕️<b>Creater :</b> @TroJanzHEX
+⭕️<b>Creater :</b> @shreevish
 
 ⭕️<b>Language :</b> <code>Python3</code>
 
 ⭕️<b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7</a> 
 
-⭕️<b>Tutorial Video :</b> <a href='https://youtu.be/KQVYQAOsFYY'>Video Link</a> 
+⭕️<b>My Channel :</b> <a href='https:/t.me/All_Movie_Rockers'>All Movie Rockers</a> 
 
 """
