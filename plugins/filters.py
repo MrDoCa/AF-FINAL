@@ -93,7 +93,11 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         if query.data.startswith("next"):
             await query.answer()
             ident, index, keyword = query.data.split("_")
-            data = BUTTONS[keyword]
+            try:
+                data = BUTTONS[keyword]
+            except KeyError:
+                await query.answer("You are using this for one of my old message, please send the request again.",show_alert=True)
+                return
 
             if int(index) == int(data["total"]) - 2:
                 buttons = data['buttons'][int(index)+1].copy()
@@ -128,7 +132,11 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         elif query.data.startswith("back"):
             await query.answer()
             ident, index, keyword = query.data.split("_")
-            data = BUTTONS[keyword] 
+            try:
+                data = BUTTONS[keyword]
+            except KeyError:
+                await query.answer("You are using this for one of my old message, please send the request again.",show_alert=True)
+                return
 
             if int(index) == 1:
                 buttons = data['buttons'][int(index)-1].copy()
@@ -169,7 +177,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             keyboard = InlineKeyboardMarkup([
                 [InlineKeyboardButton("HELP", callback_data="help_data"),
                     InlineKeyboardButton("ABOUT", callback_data="about_data")],
-                [InlineKeyboardButton("⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/All_Movie_Rockers")]
+                [InlineKeyboardButton("⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/TroJanzHEX")]
             ])
 
             await query.message.edit_text(
@@ -184,7 +192,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             keyboard = InlineKeyboardMarkup([
                 [InlineKeyboardButton("BACK", callback_data="start_data"),
                     InlineKeyboardButton("ABOUT", callback_data="about_data")],
-                [InlineKeyboardButton("⭕️ SUPPORT ⭕️", url="https://t.me/allmovierockerssdiscussion")]
+                [InlineKeyboardButton("⭕️ SUPPORT ⭕️", url="https://t.me/TroJanzSupport")]
             ])
 
             await query.message.edit_text(
@@ -199,7 +207,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             keyboard = InlineKeyboardMarkup([
                 [InlineKeyboardButton("BACK", callback_data="help_data"),
                     InlineKeyboardButton("START", callback_data="start_data")],
-                [InlineKeyboardButton("Developer", url="https://t.me/shreevish")]
+                [InlineKeyboardButton("SOURCE CODE", url="https://github.com/TroJanzHEX/Auto-Filter-Bot-V2")]
             ])
 
             await query.message.edit_text(
