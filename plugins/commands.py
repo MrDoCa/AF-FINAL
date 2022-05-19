@@ -22,7 +22,7 @@ async def start(client, message):
                     ],
                     [
                         InlineKeyboardButton(
-                            "⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/All_Movie_Rockers")
+                            "UPDATE CHANNEL", url="https://t.me/BOTS_Infinity")
                     ]
                 ]
             ),
@@ -45,7 +45,7 @@ async def help(client, message):
                     ],
                     [
                         InlineKeyboardButton(
-                            "⭕️ SUPPORT ⭕️", url="https://t.me/allmovierockerssdiscussion")
+                            "SUPPORT", url="https://t.me/botech_lanka")
                     ]
                 ]
             ),
@@ -65,10 +65,6 @@ async def about(client, message):
                     [
                         InlineKeyboardButton("BACK", callback_data="help_data"),
                         InlineKeyboardButton("START", callback_data="start_data"),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            "Developer", url="https://t.me/shreevish")
                     ]
                 ]
             ),
