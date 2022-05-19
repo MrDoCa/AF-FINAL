@@ -1,69 +1,53 @@
 class script(object):
 
 
-    START_MSG = """<b>Hey {}!!</b>
-    
-<i>I'm 👩‍🔬 All Movie Rockers!
+    START_MSG = """ <b>😍 Hey {}
+💡 This is a Movies Series finder made for all types of Movies & Series sharing groups !
+🔅 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ:- @BOTS_Infinity</b>"""
 
-💡 I Am Just A Bot To upload the Links given in main Channel!...😉
 
-Just Add Me To Your Group And Channel And Connect Them And See My Powers!! 🔥🔥⚡️
-
-For More Details Click Help and Know More Button Below..
-
---> @shreevish 🧑‍
-</i>"""    
-
-    HELP_MSG = """<b>How to use the bot??</b>
-
+    HELP_MSG = """<u>💡 𝐇𝐞𝐥𝐩</u>
 <i>
-* Add bot to your group with admin rights.
-
-* Add bot to channels which you want to link with <b>all admin rights</b>!
+📌 Add Me To Any Group And Make Me Admin
+📌 Add Me To Your Desired Channel
 </i>
-
-
-<b>Bot Commands - Works in Group only</b>
-(You need to be a Auth User in order to use these commands)
-
-* <code>/add channelid</code>  -  Links channel to your group.
-or
-* <code>/add @channelusername</code> - Links channel to your group.
-
-<i>NOTE : You can get your channel ID from @ChannelidHEXbot </i>
-
-
-* <code>/del channelid</code>  -  Delinks channel from group
-or
-* <code>/del @channelusername</code>  -  Delinks channel from group
-
-<i>NOTE : You can get connected channel details by <code>/filterstats</code> </i>
-
-
-* <code>/delall</code>  -  Removes all connected channels and filters from group!
-
-<i>Note : Dont add command delete bots in group! Otherwise, delall command wont work</i>
-
-
-* <code>/filterstats</code>  -  Check connected channels and number of filters.
-
-
-
-No need add each filter again!
-Bot will automatically search for your files and give links to that!
-
-
-<b>© @shreevish</b>"""
-
-
-    ABOUT_MSG = """⭕️<b>My Name : Main-Auto-Post-From-group-v2</b>
+<b>🔰 𝐌𝐲 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 (Works Only In Groups) :</b>
+    👉 <code>/add chat_id</code>
+                OR                  - To Connect A Group With A Channel (Bot Should Be Admin With Full Previlages In Both Group And Channel)
+     <code>/add @Username</code>
+     
+    👉 <code>/del chat_id</code>
+                OR                  - To disconnect A Group With A Channel
+     <code>/del @Username</code>
+     
+    👉 <code>/delall</code>  - This Command Will Disconnect All Connected Channel With The Group And Deletes All Its File From DB
     
-⭕️<b>Creater :</b> @shreevish
+    👉 <code>/filterstats</code> -  Check connected channels and number of filters.
+    
+<b><a href="https://t.me/bots_infinity">©️ ɪɴғɪɴɪᴛʏ ʙᴏᴛs</a></b> """
 
-⭕️<b>Language :</b> <code>Python3</code>
 
-⭕️<b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7</a> 
-
-⭕️<b>My Channel :</b> <a href='https:/t.me/All_Movie_Rockers'>All Movie Rockers</a> 
-
+    ABOUT_MSG = """
+📕 𝐀𝐛𝐨𝐮𝐭 𝐌𝐞 ,
+\n○ ᴍʏ ɴᴀᴍᴇ : <a href="https://t.me/BOTS_infinity">ɪɴꜰɪɴɪᴛʏ ꜰɪɴᴅᴇʀ</a>
+○ ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 
+○ ғʀᴀᴍᴇᴡᴏʀᴋ : ᴘʏʀᴏɢʀᴀᴍ 
+○ sᴇʀᴠᴇʀ : ʜᴇʀᴏᴋᴜ 
+○ ᴠᴇʀsɪᴏɴ : 1.0.0
+○ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : 🔐
+○ ᴄʀᴇᴀᴛᴏʀ : <a href="https://t.me/dx_doc">ᴅᴏᴄ ᴅx</a>
+<b><a href="https://t.me/bots_infinity">©️ ɪɴғɪɴɪᴛʏ ʙᴏᴛs</a></b>
 """
+    
+    TXT = """
+🔮 𝗛𝗼𝘄 𝘁𝗼 𝗴𝗲𝘁 𝘆𝗼𝘂𝗿 𝗳𝗶𝗹𝗲𝘀
+    
+<b>1️⃣ ᴊᴏɪɴ ᴛʜᴇ ʙᴇʟᴏᴡ ᴄʜᴀɴɴᴇʟ ꜰɪʀꜱᴛ
+ ʟɪɴᴋ  - https://t.me/joinchat/iTwvh9U7DH8wOWRl 
+ 
+2️⃣ ʀᴇqᴜᴇꜱᴛ ʏᴏᴜʀ ꜱᴇʀɪᴇꜱ ᴀɢᴀɪɴ 
+ 
+3️⃣ ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ sᴇʀɪᴇs ғɪʟᴇs
+🛡 ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴀꜰᴛᴇʀ ʏᴏᴜ ʀᴇᴀᴅ ɪᴛ ❗️
+<a href="https://t.me/bots_infinity">©️ ɪɴғɪɴɪᴛʏ ʙᴏᴛs</a></b>
+ """
