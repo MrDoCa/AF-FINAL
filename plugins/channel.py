@@ -11,7 +11,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
 
 from bot import Bot
-from config import AUTH_USERS, DOC_SEARCH, VID_SEARCH, MUSIC_SEARCH
+from config import AUTH_USERS, DOC_SEARCH, VID_SEARCH, MUSIC_SEARCH, PHO_SEARCH
 from database.mdb import (
     savefiles,
     deletefiles,
@@ -122,6 +122,29 @@ async def addchannel(client: Bot, message: Message):
                     file_name = msg.document.file_name
                     file_id = msg.document.file_id
                     file_size = msg.document.file_size                   
+                    link = msg.link
+                    data = {
+                        '_id': file_id,
+                        'channel_id' : channel_id,
+                        'file_name': file_name,
+                        'file_size': file_size,
+                        'link': link
+                    }
+                    docs.append(data)
+                except:
+                    pass
+        except:
+            pass
+
+        await asyncio.sleep(5)
+        
+    if PHO_SEARCH == "yes":
+        try:
+            async for msg in client.USER.search_messages(channel_id,filter='photo'):
+                try:
+                    file_name = msg.caption.split("\n")[0]
+                    file_id = msg.photo.file_id
+                    file_size = "📺"                   
                     link = msg.link
                     data = {
                         '_id': file_id,
@@ -343,11 +366,18 @@ async def addnewfiles(client: Bot, message: Message):
 
     media = message.document or message.video or message.audio
 
-    channel_id = message.chat.id
-    file_name = media.file_name
-    file_size = media.file_size
-    file_id = media.file_id
-    link = message.link
+    if media == message.photo:
+        channel_id = message.chat.id
+        file_name = message.caption.split("\n")[0]
+        file_size = "📺"
+        file_id = media.file_id
+        link = message.link
+    else:
+        channel_id = message.chat.id
+        file_name = media.file_name
+        file_size = media.file_size
+        file_id = media.file_id
+        link = message.link
 
     docs = []
     data = {
