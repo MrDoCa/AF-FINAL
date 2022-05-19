@@ -8,7 +8,7 @@
         "Telegram Bot"
     ],
     "website": "https://github.com/satyushree/Main-Auto-Post-From-group-v2",
-    "repository": "https://github.com/MrDoCa/AFproh",
+    "repository": "https://github.com/",
     "success_url": "https://telegram.dog/All_Movie_Rockers",
     "env": {
         "TG_BOT_TOKEN": {
