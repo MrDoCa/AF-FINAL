@@ -11,7 +11,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
 
 from bot import Bot
-from config import AUTH_USERS, DOC_SEARCH, VID_SEARCH, MUSIC_SEARCH, PHO_SEARCH, AUTH_CHATS
+from config import AUTH_USERS, DOC_SEARCH, VID_SEARCH, MUSIC_SEARCH, PHO_SEARCH
 from database.mdb import (
     savefiles,
     deletefiles,
@@ -26,7 +26,7 @@ from database.mdb import (
 
 
 
-@Client.on_message(filters.command(["add"]) & filters.chat(AUTH_CHATS))
+@Client.on_message(filters.group & filters.command(["add"]))
 async def addchannel(client: Bot, message: Message):
 
     if message.from_user.id not in AUTH_USERS:
