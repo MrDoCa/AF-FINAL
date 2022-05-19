@@ -6,9 +6,9 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from script import script
+from config import AUTH_CHATS
 
-
-@Client.on_message(filters.command(["start"]) & filters.private)
+@Client.on_message(filters.command(["start"]) & filters.chat(AUTH_CHATS))
 async def start(client, message):
     try:
         await message.reply_text(
@@ -31,7 +31,7 @@ async def start(client, message):
     except:
         pass
 
-@Client.on_message(filters.command(["help"]) & filters.private)
+@Client.on_message(filters.command(["help"]) & filters.chat(AUTH_CHATS))
 async def help(client, message):
     try:
         await message.reply_text(
@@ -54,7 +54,7 @@ async def help(client, message):
     except:
         pass
 
-@Client.on_message(filters.command(["about"]) & filters.private)
+@Client.on_message(filters.command(["about"]) & filters.chat(AUTH_CHATS))
 async def about(client, message):
     try:
         await message.reply_text(
