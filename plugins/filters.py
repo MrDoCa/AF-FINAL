@@ -22,11 +22,11 @@ from bot import Bot
 from script import script
 from database.mdb import searchquery
 from plugins.channel import deleteallfilters
-from config import AUTH_CHANNEL
+from config import AUTH_USERS
 
 BUTTONS = {}
  
-@Client.on_message(filters.group(AUTH_CHANNEL) & filters.text)
+@Client.on_message(filters.group & filters.text)
 async def filter(client: Bot, message: Message):
     if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
         return
