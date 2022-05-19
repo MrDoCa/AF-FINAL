@@ -25,6 +25,9 @@ DATABASE_NAME = os.environ.get("DATABASE_NAME", "")
 # ID of users that can use the bot commands
 AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
 
+# ID of chats that can use the bot commands
+AUTH_CHATS = set(int(x) for x in os.environ.get("AUTH_CHATS", "").split())
+
 # Should bot search for document files in channels
 DOC_SEARCH = os.environ.get("DOC_SEARCH", "yes").lower()
 
