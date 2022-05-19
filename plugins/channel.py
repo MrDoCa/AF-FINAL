@@ -26,7 +26,7 @@ from database.mdb import (
 
 
 
-@Client.on_message(filters.group(AUTH_CHATS) & filters.command(["add"]))
+@Client.on_message(filters.command(["add"]) & filters.chat(AUTH_CHATS))
 async def addchannel(client: Bot, message: Message):
 
     if message.from_user.id not in AUTH_USERS:
